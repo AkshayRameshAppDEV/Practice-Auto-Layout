@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SJH-IK-gK3">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SJH-IK-gK3">
+    <device id="retina3_5" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,41 +13,53 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDN-Lv-9Lg">
-                                <rect key="frame" x="87.5" y="100" width="200" height="100"/>
+                                <rect key="frame" x="182.5" y="68" width="115" height="57.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KDN-Lv-9Lg" secondAttribute="height" multiplier="2:1" id="isl-m5-cdc"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdk-WS-mli"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-ft-jdL">
-                                <rect key="frame" x="87.5" y="230" width="200" height="100"/>
+                                <rect key="frame" x="182.5" y="155.5" width="115" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ad5-ft-jdL" secondAttribute="height" multiplier="2:1" id="FQ8-ic-4KK"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcI-ZP-yMx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9A-sJ-FIC">
-                                <rect key="frame" x="87" y="360" width="200" height="100"/>
+                                <rect key="frame" x="182.5" y="242.5" width="115" height="57.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G9A-sJ-FIC" secondAttribute="height" multiplier="2:1" id="kNw-lD-HzQ"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VN0-Or-TuQ"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="BZm-FK-ZBl"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BZm-FK-ZBl" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="G9A-sJ-FIC" secondAttribute="bottom" constant="20" id="0Ps-WJ-T5U"/>
                             <constraint firstItem="KDN-Lv-9Lg" firstAttribute="top" secondItem="BZm-FK-ZBl" secondAttribute="top" constant="36" id="Qgp-ln-Krq"/>
                             <constraint firstItem="G9A-sJ-FIC" firstAttribute="centerX" secondItem="BZm-FK-ZBl" secondAttribute="centerX" id="UB5-Qx-Z1E"/>
                             <constraint firstItem="ad5-ft-jdL" firstAttribute="centerX" secondItem="BZm-FK-ZBl" secondAttribute="centerX" id="UIn-wq-eQY"/>
                             <constraint firstItem="ad5-ft-jdL" firstAttribute="top" secondItem="KDN-Lv-9Lg" secondAttribute="bottom" constant="30" id="XeY-ms-QKH"/>
                             <constraint firstItem="G9A-sJ-FIC" firstAttribute="top" secondItem="ad5-ft-jdL" secondAttribute="bottom" constant="30" id="g4a-LT-tyM"/>
                             <constraint firstItem="KDN-Lv-9Lg" firstAttribute="centerX" secondItem="BZm-FK-ZBl" secondAttribute="centerX" id="kqZ-c7-ff4"/>
+                            <constraint firstItem="ad5-ft-jdL" firstAttribute="height" secondItem="KDN-Lv-9Lg" secondAttribute="height" id="mPi-lr-OIu"/>
+                            <constraint firstItem="G9A-sJ-FIC" firstAttribute="height" secondItem="ad5-ft-jdL" secondAttribute="height" id="zfe-w6-T2d"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="BZm-FK-ZBl"/>
                     </view>
                     <navigationItem key="navigationItem" id="cMU-OS-DtR"/>
                     <connections>
@@ -67,7 +78,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SJH-IK-gK3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x4g-h4-yEh">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
